@@ -1,0 +1,34 @@
+{
+	"info": {
+		"_postman_id": "cbaade4f-1c36-43f4-916b-889a50778270",
+		"name": "Assignment3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36253151"
+	},
+	"item": [
+		{
+			"name": "Visit Website",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get Website Visit Count",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetOverallWebsiteHitCount",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}

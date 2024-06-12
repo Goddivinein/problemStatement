@@ -1,0 +1,102 @@
+Install Postman:
+Download and install Postman from the official website.
+
+Create a New Collection:
+
+Open Postman.
+Click on the "Collections" tab in the left sidebar.
+Click the "New Collection" button.
+Name the collection (e.g., "Website Hit Counter System").
+Add Requests to the Collection:
+
+1. VisitWebsite
+Click on the "Add Request" button in the new collection.
+Name the request (e.g., "VisitWebsite").
+Set the request type to POST.
+Set the URL to http://localhost:5000/VisitWebsite.
+Go to the "Body" tab, select "raw" and set the type to "JSON".
+Enter the following JSON example in the body:
+json
+Copy code
+{
+  "customerId": "customer1",
+  "deviceId": "deviceA",
+  "websiteId": "website1"
+}
+Click "Save" to save the request to the collection.
+2. GetWebsiteVisitCountForCustomer
+Click on the "Add Request" button in the new collection.
+Name the request (e.g., "GetWebsiteVisitCountForCustomer").
+Set the request type to GET.
+Set the URL to http://localhost:5000/GetWebsiteVisitCountForCustomer.
+Go to the "Params" tab and add the following parameters:
+Key: customerId, Value: customer1
+Key: websiteId, Value: website1
+Click "Save" to save the request to the collection.
+3. GetOverallWebsiteHitCount
+Click on the "Add Request" button in the new collection.
+Name the request (e.g., "GetOverallWebsiteHitCount").
+Set the request type to GET.
+Set the URL to http://localhost:5000/GetOverallWebsiteHitCount.
+Go to the "Params" tab and add the following parameter:
+Key: websiteId, Value: website1
+Click "Save" to save the request to the collection.
+Document Each Request:
+
+For each request, you can add descriptions and example responses in the "Documentation" tab.
+Example Documentation
+VisitWebsite
+
+Request Type: POST
+URL: http://localhost:5000/VisitWebsite
+Headers: None
+Body:
+json
+Copy code
+{
+  "customerId": "customer1",
+  "deviceId": "deviceA",
+  "websiteId": "website1"
+}
+Example Response:
+json
+Copy code
+{
+  "message": "Visit tracked successfully"
+}
+GetWebsiteVisitCountForCustomer
+
+Request Type: GET
+URL: http://localhost:5000/GetWebsiteVisitCountForCustomer
+Headers: None
+Parameters:
+customerId: customer1
+websiteId: website1
+Example Response:
+json
+Copy code
+{
+  "customer_id": "customer1",
+  "website_id": "website1",
+  "visit_count": 1
+}
+GetOverallWebsiteHitCount
+
+Request Type: GET
+URL: http://localhost:5000/GetOverallWebsiteHitCount
+Headers: None
+Parameters:
+websiteId: website1
+Example Response:
+json
+Copy code
+{
+  "website_id": "website1",
+  "hit_count": 1
+}
+Exporting the Collection
+Click on the "Collections" tab in the left sidebar.
+Click the three dots (...) next to your collection.
+Select "Export".
+Choose the "Collection v2.1 (recommended)" format.
+Click "Export" and save the file.
